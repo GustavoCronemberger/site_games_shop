@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Fontsgoole para buscar o tipo de fonte que você quer usar. Uma opção para títulos e menu, outra para letras normais*/
+header,
+section h2,
+section h3,
+form button {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section h3 {
+    font-weight: lighter;
+    font-size: medium;
+    margin-bottom: 16px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    padding: 16px;
+    background-color: #182c61;
+    color: #ecf0f1;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+header nav li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+/*Dessa forma, apesar de ocupar 100% da largura, o limite máximo é de 1280px, após isso ele não usa mais nada e fica centralizado, evitando cansaço para leitura.*/
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brands-list img {
+    height: 24px;
+}
+
+.brands-list li {
+    display: inline;
+    margin-right: 8px;
+}
+/*Esse é o efeito cascata no css: Para evitar construir um section container com todos os itens que foram estipulados logo a cima, modificando apenas o align-items para que fique no topo, foi utilizado apenas a sobreposição aqui, combinando o restante das modificações no conjunto a cima.*/
+section .container{
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px;
+    color: #182c61;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+.store-front {
+    margin-right: 32px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+#contact .container {
+    display: block;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+/*Para evitar que o usuário fique aumentando a área de tamanho e quebre os alinhamentos.*/
+form textarea {
+    resize: none;
+}
+/*Com o cursor pointer, nossos botões onde o mouse passa em cima, fazem uma mudança para indicar que é clicável*/
+form button {
+    background-color: #182c61;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #31498d;
+}
+/*Para editar área ao redor dos labels*/
+input:focus, textarea:focus {
+    outline-color: #182c61;
+}
+
+footer {
+    background-color: #182c61;
+    color: #ecf0f1;
+    padding: 16px 0;
+}
